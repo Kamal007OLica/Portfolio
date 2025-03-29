@@ -1,0 +1,280 @@
+:root {
+    --primary-color: #1a1a1a;
+    --highlight-color: #22c55e;
+    --link-color: #3b82f6;
+    --background: #ffffff;
+    --card-bg: #f8fafc;
+    --card-hover: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    color: var(--primary-color);
+    min-height: 100vh;
+    position: relative;
+    background: #f8fafc;
+}
+
+.gradient-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(34, 197, 94, 0.1),
+        rgba(59, 130, 246, 0.1)
+    );
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 2rem 4rem;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.intro {
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 2rem;
+}
+
+.journey {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #4b5563;
+    padding: 0 1rem;
+}
+
+.link {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.link:hover {
+    color: #2563eb;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+    padding: 2rem;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    background: var(--card-hover);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.card-link {
+    color: var(--link-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.social-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.social-link:hover {
+    color: var(--link-color);
+}
+
+.divider {
+    margin: 0 1rem;
+    color: #d1d5db;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .journey {
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .title-image {
+        margin-bottom: 2rem;
+    }
+    
+    .logo {
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem 1rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .card-content {
+        padding: 1.5rem;
+    }
+
+    .logo {
+        max-width: 80px;
+    }
+}
+
+/* Modern touch: smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Modern touch: selection color */
+::selection {
+    background: var(--highlight-color);
+    color: white;
+}
+
+/* Add these new gradient text classes */
+.gradient-text-1 {
+    background: linear-gradient(135deg, #22c55e, #3b82f6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+}
+
+.gradient-text-2 {
+    background: linear-gradient(135deg, #22c55e, #2563eb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+}
+
+/* Add after your existing CSS variables */
+.title-image {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 1rem;
+}
+
+.logo {
+    max-width: 120px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #22c55e, #3b82f6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.logo-minimal {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #22c55e, #3b82f6);
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+} 
